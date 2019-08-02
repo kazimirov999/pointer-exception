@@ -5,26 +5,26 @@ public class Methods {
     private Methods() {}
 
     public static int sum(int a, int b) throws MyException, IllegalAccessException, MyException2 {
-        verify(a, b);
+        verifyParameters(a, b);
         return a + b;
     }
 
     public static int subtract(int a, int b) throws MyException, IllegalAccessException, MyException2 {
-        verify(a, b);
+        verifyParameters(a, b);
         return a - b;
     }
 
     public static int multiply(int a, int b) throws MyException, IllegalAccessException, MyException2 {
-        verify(a, b);
+        verifyParameters(a, b);
         return a * b;
     }
 
     public static int divide(int a, int b) throws MyException, IllegalAccessException, MyException2 {
-        verify(a, b);
+        verifyParameters(a, b);
         return a/b;
     }
 
-    private static void verify(int a, int b) throws IllegalAccessException, MyException, MyException2 {
+    private static void verifyParameters(int a, int b) throws IllegalAccessException, MyException, MyException2 {
         if (a < 0 && b < 0)
             throw new IllegalArgumentException("Both arguments are less than zero.");
 
